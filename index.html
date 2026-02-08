@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emmanuella Tebili</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #1a0d24 0%, #12051a 100%);
+      color: #f0e8ff;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2a1540 0%, #3c1f5a 100%);
+      text-align: center;
+      padding: 140px 20px 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 30% 20%, rgba(255, 218, 185, 0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4.2rem;
+      color: #e6d5ff;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+      text-shadow: 0 4px 20px rgba(180, 140, 255, 0.35);
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+      color: #d7c0ff;
+      font-weight: 300;
+      letter-spacing: 0.8px;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: -80px auto 80px;
+      padding: 0 20px;
+    }
+
+    .section {
+      background: rgba(30, 15, 50, 0.75);
+      backdrop-filter: blur(10px);
+      border-radius: 24px;
+      padding: 60px 50px;
+      margin-bottom: 50px;
+      border: 1px solid rgba(180, 140, 255, 0.15);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+      transition: all 0.4s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-10px);
+      border-color: rgba(200, 170, 255, 0.4);
+      box-shadow: 0 25px 60px rgba(120, 80, 220, 0.25);
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #d4bfff;
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+      position: relative;
+      display: inline-block;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(to right, #c8a2ff, #f5e1ff);
+      border-radius: 2px;
+    }
+
+    p {
+      font-size: 1.15rem;
+      color: #e8deff;
+    }
+
+    .photo {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 8px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 15px 40px rgba(120, 80, 220, 0.35);
+      margin: 0 auto 40px;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .photo:hover {
+      transform: scale(1.08);
+    }
+
+    .highlight {
+      color: #e0c3ff;
+      font-weight: 500;
+    }
+
+    .message-box {
+      background: rgba(40, 20, 60, 0.6);
+      border-left: 5px solid #c8a2ff;
+      padding: 30px;
+      margin: 40px 0;
+      border-radius: 16px;
+      display: none;
+      font-style: italic;
+      color: #e8deff;
+      backdrop-filter: blur(6px);
+    }
+
+    .btn-message {
+      display: inline-block;
+      background: linear-gradient(90deg, #b897ff, #d7c0ff);
+      color: #1a0d24;
+      padding: 16px 48px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.15rem;
+      margin-top: 30px;
+      cursor: pointer;
+      border: none;
+      transition: all 0.4s ease;
+      box-shadow: 0 8px 25px rgba(200, 170, 255, 0.3);
+    }
+
+    .btn-message:hover {
+      background: linear-gradient(90deg, #d7c0ff, #f0e8ff);
+      transform: translateY(-4px);
+      box-shadow: 0 15px 40px rgba(215, 192, 255, 0.5);
+    }
+
+    .social {
+      text-align: center;
+      margin: 60px 0 40px;
+    }
+
+    .social a {
+      color: #d7c0ff;
+      font-size: 2.1rem;
+      margin: 0 22px;
+      transition: all 0.4s ease;
+    }
+
+    .social a:hover {
+      color: #f5e1ff;
+      transform: translateY(-6px) scale(1.15);
+    }
+
+    footer {
+      text-align: center;
+      padding: 60px 20px 40px;
+      color: #a68cd9;
+      font-size: 1rem;
+      border-top: 1px solid rgba(180, 140, 255, 0.15);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 3.2rem; }
+      h2 { font-size: 2.4rem; }
+      .section { padding: 50px 30px; }
+      .photo { width: 180px; height: 180px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Emmanuella Tebili</h1>
+    <p class="subtitle"> Curieuse • Ambitieuse • Esprit Analytique</p>
+  </header>
+
+  <div class="container">
+
+    <!-- À PROPOS -->
+    <div class="section">
+      <img src="UU.jpg" alt="Emmanuella" class="photo">
+      
+      <h2>À propos de moi</h2>
+      <p>
+        Je me nomme <span class="highlight">Emmanuella Tebili</span>, j'ai 21 ans, titulaire d'un baccaleuriat scientifique précisement le Bac C et d'une licence en Mathématiques et applications.
+        Etudiante passionnée par les mathématiques, les sciences des données et les technologies numériques. Mon parcours académique s'inscrit dans 
+        une dynamique d'exigence intellectuelle, avec intérêt particulier pour l'analyse, la resolution de problèmes.
+        Au fil de ma formation, j'ai dévéloppé un attrait marqué pour la data science, domaine dans lequel se rencontrent mathématiques et outils
+        informatiques. j'ai également exploré des projets techniques liés à l'automatisation et aux capteurs de fuite de gaz, afin
+        de mieux comprendre les applications concrètes des données dans le monde réel.
+      </p>
+      <p>
+        Mes centres d'intérêt s'articulent autour de l'innovation, de l'apprentissage continu, de la lecture.
+      </p>
+
+      <!-- À toi de remplir -->
+      <div style="margin-top: 45px; text-align: center; font-size: 1.15rem;">
+        <p><strong>Email :</strong> <a href="tebili371@gmail.com" style="color: #d7c0ff; text-decoration: none;">tebili371@gmail.com</a></p>
+        <p><strong>WhatsApp :</strong> <a href="https://wa.me/2250500064894" style="color: #d7c0ff; text-decoration: none;">+225 05 00 06 48 94 </a></p>
+        <p><strong>Linkedln :</strong> <a href="#" style="color: #d7c0ff; text-decoration: none;">@Emmanuella Tebili</a></p>
+      </div>
+    </div>
+
+    <!-- MA PASSION -->
+    <div class="section">
+      <h2>Ma passion</h2>
+      <p>
+        Passionnée <span class="highlight">par la data science</span>, je m'intèresse à la manière dont les données permettent de comprendre,
+        d'analyser et d'anticiper le monde qui nous entoure. Mon parcours est fortement orienté vers les mathématiques,
+        les statistiques, que je développe à travers des projets académiques. Chaque experience renforce mon envie de me 
+        spécialiser en data science précisement être data analyste et de transformer les données en solutions concrètes et utiles.
+      </p>
+
+      <button class="btn-message" onclick="toggleMessage()">Cliquez ici</button>
+
+      <div id="specialMessage" class="message-box">
+       Dans un contexte où les opportunités restent parfois limitées malgré la motivation et le potentiel, cette formation 
+       représente bien plus qu’une simple sélection : c’est une chance de faire entendre une ambition.
+       Comme le dit un proverbe africain, « c’est au bout de la patience que se trouve la réussite ». 
+       Animée par cette conviction, je choisis de persévérer, d’apprendre et de transformer chaque difficulté en levier de progression. 
+       Cette formation incarne pour moi l’espoir que l’effort, la discipline et la passion finissent toujours par ouvrir des portes.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="social">
+    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://wa.me/2250500064894" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+  <footer>
+    Créé avec douceur et passion — © Emmanuella Tebili 2026
+  </footer>
+
+  <script>
+    function toggleMessage() {
+      const msg = document.getElementById('specialMessage');
+      msg.style.display = msg.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>
